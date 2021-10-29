@@ -31,19 +31,19 @@ class RealestateApplicationTests {
         assertThat(controller).isNotNull();
     }
 
-//    @Test
-//    void realEstateGetAll() {
-//        RealEstate[] realEstates = restTemplate.getForObject("http://localhost:" + port + "/realestate/all", RealEstate[].class);
-//        assertThat(realEstates).isNotNull();
-//    }
-//
-//    @Test
-//    void RealEstateGetByRows() {
-//        int test = 2;
-//        RealEstate[] realEstates = restTemplate.getForObject("http://localhost:" + port + "/realestate/getbyRowAmount?rows=" + test, RealEstate[].class);
-//        assertThat(realEstates).isNotNull();
-//        assertThat(realEstates.length).isLessThan(test);
-//    }
+    @Test
+    void realEstateGetAll() {
+        RealEstate[] realEstates = restTemplate.getForObject("http://localhost:" + port + "/realestate/all", RealEstate[].class);
+        assertThat(realEstates).isNotNull();
+    }
+
+    @Test
+    void RealEstateGetByRows() {
+        int test = 2;
+        RealEstate[] realEstates = restTemplate.getForObject("http://localhost:" + port + "/realestate/getbyRowAmount?rows=" + test, RealEstate[].class);
+        assertThat(realEstates).isNotNull();
+        assertThat(realEstates.length).isLessThan(test);
+    }
 //
 //    @Test
 //    void RealEstateSearch() {
